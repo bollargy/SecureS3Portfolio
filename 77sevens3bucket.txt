@@ -1,0 +1,21 @@
+# Portfolio: Secure AWS S3 Bucket Configuration
+
+## 1. Project Overview
+**Title:** Secure AWS S3 Bucket Setup  
+**Objective:**  
+Demonstrate the creation and configuration of a secure AWS S3 bucket with:  
+- Public access blocked  
+- Server-side encryption (SSE-S3 / SSE-KMS)  
+- Bucket policies restricting access  
+- Object versioning to protect against accidental deletion  
+- Lifecycle rules for cost optimization  
+- Testing via AWS CLI  
+
+## 2. Steps Taken
+
+### Step 1: Create S3 Bucket
+```bash
+aws s3api create-bucket \
+  --bucket 77sevencr8tvsecurebucket \
+  --region eu-west-2 \
+  --create-bucket-configuration LocationConstraint=eu-west-2
